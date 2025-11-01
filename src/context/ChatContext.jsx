@@ -91,24 +91,22 @@ export const ChatProvider = ({ children }) => {
       console.error('Failed to load messages:', error);
       // Use mock messages as fallback
       const mockMessages = {
-        'ai-chatbot': [
-          {
-            id: 'msg-1',
-            senderId: 'ai-chatbot',
-            recipientId: 'currentUser',
-            content: 'Hi! How can I help you today?',
-            timestamp: new Date(Date.now() - 300000).toISOString(),
-            status: 'read'
-          }
-        ],
         'user-1': [
           {
-            id: 'msg-2',
+            id: 'msg-1',
             senderId: 'user-1',
             recipientId: 'currentUser',
             content: 'Hey, how are you?',
-            timestamp: new Date(Date.now() - 3600000).toISOString(),
+            timestamp: new Date(Date.now() - 3700000).toISOString(),
             status: 'delivered'
+          },
+          {
+            id: 'msg-2',
+            senderId: 'currentUser',
+            recipientId: 'user-1',
+            content: 'I\'m good, thanks! How about you?',
+            timestamp: new Date(Date.now() - 3600000).toISOString(),
+            status: 'read'
           }
         ],
         'user-2': [
@@ -117,7 +115,53 @@ export const ChatProvider = ({ children }) => {
             senderId: 'currentUser',
             recipientId: 'user-2',
             content: 'See you tomorrow!',
+            timestamp: new Date(Date.now() - 7300000).toISOString(),
+            status: 'read'
+          },
+          {
+            id: 'msg-4',
+            senderId: 'user-2',
+            recipientId: 'currentUser',
+            content: 'Sounds great!',
             timestamp: new Date(Date.now() - 7200000).toISOString(),
+            status: 'read'
+          }
+        ],
+        'user-3': [
+          {
+            id: 'msg-5',
+            senderId: 'user-3',
+            recipientId: 'currentUser',
+            content: 'Thanks for the update',
+            timestamp: new Date(Date.now() - 86400000).toISOString(),
+            status: 'read'
+          }
+        ],
+        'user-4': [
+          {
+            id: 'msg-6',
+            senderId: 'user-4',
+            recipientId: 'currentUser',
+            content: 'Let me know when you are free',
+            timestamp: new Date(Date.now() - 172800000).toISOString(),
+            status: 'delivered'
+          }
+        ],
+        'user-5': [
+          {
+            id: 'msg-7',
+            senderId: 'currentUser',
+            recipientId: 'user-5',
+            content: 'Thanks for your help!',
+            timestamp: new Date(Date.now() - 259300000).toISOString(),
+            status: 'read'
+          },
+          {
+            id: 'msg-8',
+            senderId: 'user-5',
+            recipientId: 'currentUser',
+            content: 'Got it, thanks!',
+            timestamp: new Date(Date.now() - 259200000).toISOString(),
             status: 'read'
           }
         ]
