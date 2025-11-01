@@ -20,6 +20,40 @@ export const ChatProvider = ({ children }) => {
       setContacts(data);
     } catch (error) {
       console.error('Failed to load contacts:', error);
+      // Use mock data as fallback
+      const mockContacts = [
+        {
+          id: 'ai-chatbot',
+          name: 'AI Assistant',
+          avatar: null,
+          lastMessage: 'Hi! How can I help you today?',
+          lastMessageTime: new Date().toISOString(),
+          unreadCount: 0,
+          isOnline: true,
+          lastSeen: 'Online'
+        },
+        {
+          id: 'user-1',
+          name: 'John Doe',
+          avatar: null,
+          lastMessage: 'Hey, how are you?',
+          lastMessageTime: new Date(Date.now() - 3600000).toISOString(),
+          unreadCount: 2,
+          isOnline: false,
+          lastSeen: 'Last seen 1 hour ago'
+        },
+        {
+          id: 'user-2',
+          name: 'Jane Smith',
+          avatar: null,
+          lastMessage: 'See you tomorrow!',
+          lastMessageTime: new Date(Date.now() - 7200000).toISOString(),
+          unreadCount: 0,
+          isOnline: true,
+          lastSeen: 'Online'
+        }
+      ];
+      setContacts(mockContacts);
     }
   };
 
