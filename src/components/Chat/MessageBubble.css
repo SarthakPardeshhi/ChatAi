@@ -1,0 +1,57 @@
+.message-bubble {
+  max-width: 70%;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  word-wrap: break-word;
+}
+
+.message-received {
+  align-self: flex-start;
+  background: #f5f5f5;
+  border: 1px solid #cccccc;
+}
+
+.message-sent {
+  align-self: flex-end;
+  background: #e0e0e0;
+  border: 1px solid #cccccc;
+  text-align: right;
+}
+
+.message-content {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.message-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.message-sent .message-footer {
+  justify-content: flex-end;
+}
+
+.message-received .message-footer {
+  justify-content: flex-start;
+}
+
+.message-time {
+  font-size: 11px;
+  color: #999;
+}
+
+.message-status {
+  font-size: 12px;
+  color: #999;
+  line-height: 1;
+}
+
+.message-status-read {
+  color: #3498db;
+}
