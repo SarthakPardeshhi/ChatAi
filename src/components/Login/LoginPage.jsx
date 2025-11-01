@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from '@tanstack/react-router';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 import { validateEmail, validatePassword } from '../../utils/helpers';
 import Toast from '../common/Toast';
@@ -17,7 +17,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate({ to: '/chat' });
+      navigate('/chat');
     }
   }, [isAuthenticated, navigate]);
 
