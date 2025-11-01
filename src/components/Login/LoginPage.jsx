@@ -52,7 +52,7 @@ const LoginPage = () => {
 
     try {
       await login(email, password, rememberMe);
-      navigate({ to: '/chat' });
+      navigate('/chat');
     } catch (error) {
       if (error.message.includes('credentials') || error.message.includes('401')) {
         showToast('Invalid email or password');
