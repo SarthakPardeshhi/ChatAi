@@ -23,16 +23,6 @@ export const ChatProvider = ({ children }) => {
       // Use mock data as fallback
       const mockContacts = [
         {
-          id: 'ai-chatbot',
-          name: 'AI Assistant',
-          avatar: null,
-          lastMessage: 'Hi! How can I help you today?',
-          lastMessageTime: new Date().toISOString(),
-          unreadCount: 0,
-          isOnline: true,
-          lastSeen: 'Online'
-        },
-        {
           id: 'user-1',
           name: 'John Doe',
           avatar: null,
@@ -51,6 +41,36 @@ export const ChatProvider = ({ children }) => {
           unreadCount: 0,
           isOnline: true,
           lastSeen: 'Online'
+        },
+        {
+          id: 'user-3',
+          name: 'Mike Johnson',
+          avatar: null,
+          lastMessage: 'Thanks for the update',
+          lastMessageTime: new Date(Date.now() - 86400000).toISOString(),
+          unreadCount: 0,
+          isOnline: false,
+          lastSeen: 'Last seen yesterday'
+        },
+        {
+          id: 'user-4',
+          name: 'Sarah Williams',
+          avatar: null,
+          lastMessage: 'Let me know when you are free',
+          lastMessageTime: new Date(Date.now() - 172800000).toISOString(),
+          unreadCount: 1,
+          isOnline: true,
+          lastSeen: 'Online'
+        },
+        {
+          id: 'user-5',
+          name: 'David Brown',
+          avatar: null,
+          lastMessage: 'Got it, thanks!',
+          lastMessageTime: new Date(Date.now() - 259200000).toISOString(),
+          unreadCount: 0,
+          isOnline: false,
+          lastSeen: 'Last seen 3 days ago'
         }
       ];
       setContacts(mockContacts);
