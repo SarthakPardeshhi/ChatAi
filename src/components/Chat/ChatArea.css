@@ -1,0 +1,23 @@
+.chat-area {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  flex: 1;
+}
+
+.chat-area-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.chat-area-empty-message {
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+}
+
+.chat-area-empty-message p {
+  margin: 0;
+}
